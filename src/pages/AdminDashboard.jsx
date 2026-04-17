@@ -18,7 +18,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     const checkAdmin = () => {
-      const token = localStorage.getItem('piggy_token');
+      const token = localStorage.getItem('FlavorSync_token');
       if (token) {
         try {
           const payload = JSON.parse(atob(token.split('.')[1]));
@@ -50,7 +50,7 @@ export default function AdminDashboard() {
       const payload = JSON.parse(atob(token.split('.')[1]));
       
       if (payload.role === 'admin') {
-        localStorage.setItem('piggy_token', token);
+        localStorage.setItem('FlavorSync_token', token);
         setIsAdmin(true);
         fetchRestaurants();
       } else {
@@ -73,7 +73,7 @@ export default function AdminDashboard() {
     e.preventDefault();
     setLoading(true);
     try {
-      const token = localStorage.getItem('piggy_token');
+      const token = localStorage.getItem('FlavorSync_token');
       const payload = {
         ...restForm,
         rating: parseFloat(restForm.rating) || 4.0,
@@ -96,7 +96,7 @@ export default function AdminDashboard() {
     e.preventDefault();
     setLoading(true);
     try {
-      const token = localStorage.getItem('piggy_token');
+      const token = localStorage.getItem('FlavorSync_token');
       const selectedRest = restaurants.find(r => r._id === foodForm.restaurantId);
       if (!selectedRest) throw new Error("Select a restaurant first");
 
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
             {loginError && <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm text-center font-semibold">{loginError}</div>}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">Admin Email</label>
-              <input type="email" required value={loginForm.email} onChange={e => setLoginForm({...loginForm, email: e.target.value})} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-orange-500 outline-none bg-white font-medium text-gray-900" placeholder="admin@piggy.com" />
+              <input type="email" required value={loginForm.email} onChange={e => setLoginForm({...loginForm, email: e.target.value})} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-orange-500 outline-none bg-white font-medium text-gray-900" placeholder="admin@flavorsync.com" />
             </div>
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">Password</label>
@@ -157,7 +157,7 @@ export default function AdminDashboard() {
             <p className="text-gray-500 mt-2">Manage your platform data visually</p>
           </div>
           <button 
-            onClick={() => { localStorage.removeItem('piggy_token'); setIsAdmin(false); }}
+            onClick={() => { localStorage.removeItem('FlavorSync_token'); setIsAdmin(false); }}
             className="text-sm font-bold text-gray-500 hover:text-red-500 transition-colors"
           >
             Logout Admin

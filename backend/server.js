@@ -34,7 +34,7 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/payments', paymentRoutes);
 
 // MongoDB connection
-const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/piggy';
+const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/FlavorSync';
 
 console.log('Connecting to MongoDB...');
 mongoose.connect(mongoUri)

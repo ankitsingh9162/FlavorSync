@@ -5,7 +5,7 @@ import Order from './models/Order.js';
 
 dotenv.config();
 
-const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/piggy';
+const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/FlavorSync';
 
 async function runTest() {
   try {

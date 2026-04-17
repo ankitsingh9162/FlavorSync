@@ -108,7 +108,7 @@ const FOODS_TEMPLATE = [
   { name: 'Cappuccino', restaurant: 'Cafe Mocha', price: 110, rating: 4.7, image: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80', category: 'Coffee', deliveryTime: '10-15 mins', discount: '' },
 ];
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/piggy')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/FlavorSync')
   .then(async () => {
     console.log('MongoDB Connected correctly to server');
     

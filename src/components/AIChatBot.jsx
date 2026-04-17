@@ -14,7 +14,7 @@ export default function AIChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
-    { role: 'bot', text: 'Hi! I am Piggy AI. 🐽 Craving something? Just say "I want pizza" or "Take me to burgers" and I will handle the rest!' }
+    { role: 'bot', text: 'Hi! I am FlavorSync AI. 🐽 Craving something? Just say "I want pizza" or "Take me to burgers" and I will handle the rest!' }
   ]);
   const [isTyping, setIsTyping] = useState(false);
   const scrollRef = useRef(null);
@@ -89,7 +89,7 @@ export default function AIChatBot() {
                   <Bot size={24} />
                 </div>
                 <div>
-                  <h3 className="font-black text-lg leading-none">Piggy AI</h3>
+                  <h3 className="font-black text-lg leading-none">FlavorSync AI</h3>
                   <span className="text-[10px] font-bold opacity-80 uppercase tracking-widest flex items-center gap-1">
                     <Sparkles size={8} /> Online
                   </span>

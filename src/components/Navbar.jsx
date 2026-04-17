@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center gap-2 group hover:scale-105 transition-transform duration-300">
               <span className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-600">
-                Piggy
+                FlavorSync
               </span>
             </Link>
 

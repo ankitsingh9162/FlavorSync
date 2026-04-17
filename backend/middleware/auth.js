@@ -6,7 +6,7 @@ export const auth = (req, res, next) => {
     if (!authHeader) return res.status(401).json({ message: 'Access Denied. No token provided.' });
 
     const token = authHeader.replace('Bearer ', '');
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecretpiggykey');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecretFlavorSynckey');
 
     req.user = decoded;
     next();
@@ -21,7 +21,7 @@ export const adminAuth = (req, res, next) => {
     if (!authHeader) return res.status(401).json({ message: 'Access Denied. No token provided.' });
 
     const token = authHeader.replace('Bearer ', '');
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecretpiggykey');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'supersecretFlavorSynckey');
 
     if (decoded.role !== 'admin') {
       return res.status(403).json({ message: 'Access Denied. You are not an admin.' });

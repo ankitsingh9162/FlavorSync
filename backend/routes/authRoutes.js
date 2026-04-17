@@ -14,12 +14,12 @@ router.post('/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    const role = email.toLowerCase() === 'admin@piggy.com' ? 'admin' : 'user';
+    const role = email.toLowerCase() === 'admin@flavorsync.com' ? 'admin' : 'user';
 
     user = new User({ name, email, password: hashedPassword, role });
     await user.save();
 
-    const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET || 'supersecretpiggykey', { expiresIn: '7d' });
+    const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET || 'supersecretFlavorSynckey', { expiresIn: '7d' });
     res.status(201).json({ token, user: { id: user._id, name: user.name, email: user.email, role: user.role } });
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
-    const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET || 'supersecretpiggykey', { expiresIn: '7d' });
+    const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET || 'supersecretFlavorSynckey', { expiresIn: '7d' });
     res.json({ token, user: { id: user._id, name: user.name, email: user.email, role: user.role } });
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
@@ -64,14 +64,14 @@ router.post('/google-login', async (req, res) => {
         name,
         email,
         password: hashedPassword, // Dummy password for oauth users
-        role: email.toLowerCase() === 'admin@piggy.com' ? 'admin' : 'user'
+        role: email.toLowerCase() === 'admin@flavorsync.com' ? 'admin' : 'user'
       });
       await user.save();
     }
 
     const token = jwt.sign(
       { userId: user._id, role: user.role },
-      process.env.JWT_SECRET || 'supersecretpiggykey',
+      process.env.JWT_SECRET || 'supersecretFlavorSynckey',
       { expiresIn: '7d' }
     );
 

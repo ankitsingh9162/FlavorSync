@@ -19,7 +19,7 @@ export default function Home() {
               Craving something <span className="text-orange-500 italic block mt-2">delicious?</span>
             </h2>
             <p className="text-xl lg:text-2xl text-gray-500 mb-12 max-w-xl mx-auto md:mx-0 font-medium leading-relaxed">
-              Premium local food delivered to your doorstep in minutes. Experience the <span className="text-orange-600 font-bold">Piggy</span> speed.
+              Premium local food delivered to your doorstep in minutes. Experience the <span className="text-orange-600 font-bold">FlavorSync</span> speed.
             </p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

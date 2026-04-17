@@ -15,8 +15,8 @@ const askQuestion = (query) => new Promise(resolve => rl.question(query, resolve
 
 async function main() {
   try {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/piggy');
-    console.log('\n🌟 Welcome to the Piggy Admin Terminal 🌟');
+    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/FlavorSync');
+    console.log('\n🌟 Welcome to the FlavorSync Admin Terminal 🌟');
     console.log('Use this script to easily add local restaurants (Dhabas, Cafes, etc.) to your app.\n');
     console.log('--- ADD A NEW LOCAL RESTAURANT ---\n');
 

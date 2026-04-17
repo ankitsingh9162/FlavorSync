@@ -11,7 +11,7 @@ const api = axios.create({
 
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('piggy_token');
+    const token = localStorage.getItem('flavorsync_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

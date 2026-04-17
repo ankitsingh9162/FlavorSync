@@ -45,7 +45,7 @@ export default function Login() {
       <div className="max-w-md w-full relative z-10 px-6 py-8 sm:px-10 bg-white/80 backdrop-blur-xl sm:rounded-3xl shadow-xl border border-white/50">
         <div className="text-center mb-8">
           <Link to="/" className="inline-block mb-6">
-            <h1 className="text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Piggy</h1>
+            <h1 className="text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">FlavorSync</h1>
           </Link>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Welcome Back</h2>
           <p className="text-gray-500 text-sm">Sign in to continue ordering delicious food</p>

@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://localhost:27017/piggy')
+mongoose.connect('mongodb://localhost:27017/FlavorSync')
   .then(async () => {
     const res = await mongoose.connection.collection('users').updateOne(
-      { email: 'admin@piggy.com' }, 
+      { email: 'admin@FlavorSync.com' }, 
       { $set: { role: 'admin' } }
     );
     console.log('Fixed admin role:', res.modifiedCount);

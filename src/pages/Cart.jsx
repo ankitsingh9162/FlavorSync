@@ -42,7 +42,7 @@ export default function Cart() {
         key: import.meta.env.VITE_RAZORPAY_KEY_ID || 'your-razorpay-key-id',
         amount: orderData.amount,
         currency: orderData.currency,
-        name: 'Piggy',
+        name: 'FlavorSync',
         description: 'Food Order Payment',
         order_id: orderData.orderId,
         handler: async (response) => {

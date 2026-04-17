@@ -47,7 +47,7 @@ export const useCartStore = create(
       getSubtotal: () => get().cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
     }),
     {
-      name: 'piggy_cart', // unique name for localStorage
+      name: 'flavorsync_cart', // unique name for localStorage
     }
   )
 );

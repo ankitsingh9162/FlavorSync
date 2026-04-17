@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="space-y-4">
           <Link to="/" className="flex items-center gap-2 group">
             <span className="text-3xl font-black bg-clip-text text-transparent text-white">
-              Piggy
+              FlavorSync
             </span>
           </Link>
           <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
@@ -54,7 +54,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FiMail className="text-orange-500 flex-shrink-0" />
-              <span>support@piggy.com</span>
+              <span>support@flavorsync.com</span>
             </li>
           </ul>
         </div>
@@ -81,7 +81,7 @@ const Footer = () => {
       </div>
       
       <div className="max-w-7xl mx-auto border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-        <p>&copy; {new Date().getFullYear()} Piggy Food Delivery. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} FlavorSync Food Delivery. All rights reserved.</p>
         <div className="flex space-x-4 mt-4 md:mt-0">
           <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
           <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

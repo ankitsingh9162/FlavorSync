@@ -20,7 +20,7 @@ const categories = [
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const SYSTEM_PROMPT = `
-You are Piggy AI, a friendly and helpful food delivery assistant for the "Piggy" app. 
+You are FlavorSync AI, a friendly and helpful food delivery assistant for the "FlavorSync" app. 
 Your goal is to help users find delicious food and navigate the app.
 
 Guidelines:
