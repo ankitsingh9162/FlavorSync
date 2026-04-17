@@ -1,16 +1,32 @@
-# React + Vite
+# FlavorSync - AI-Powered Food Delivery Ecosystem 🍲🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FlavorSync is a modern, high-performance food delivery platform built with the **MERN stack**, featuring a sophisticated **AI Concierge (Gemini AI)** to personalize the ordering experience. This project demonstrates a production-ready architecture with automated CI/CD pipelines and secure payment integrations.
 
-Currently, two official plugins are available:
+## 🌟 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Brainy Chatbot (FlavorSync AI)**: A custom-trained agent using Google Gemini 1.5 Flash to help users discover dishes and navigate categories seamlessly.
+- **Dynamic UX/UI**: Built with React and Framer Motion for smooth, high-end animations and a premium look.
+- **Full-Stack Order Management**: Real-time cart management powered by Zustand and a robust Node/Express backend.
+- **Secure Payments**: Integrated with Razorpay for secure, real-time transaction processing.
+- **Smart Categorization**: Intelligent food and restaurant classification with automated navigation triggers.
+- **Admin Command Center**: Secure dashboard for managing restaurants, dishes, and inventory.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React.js, Tailwind CSS, Framer Motion, Lucide Icons, Zustand.
+- **Backend**: Node.js, Express.js, Mongoose.
+- **AI/ML**: Google Generative AI (Gemini Flash).
+- **Database**: MongoDB Atlas.
+- **Payments**: Razorpay API.
+- **Infrastructure**: Vercel (Frontend), Render (Backend), GitHub Actions for CI/CD.
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository.
+2. Install dependencies: `npm install` and `cd backend && npm install`.
+3. Set up environment variables in `.env` files.
+4. Run development servers: `npm run dev`.
+
+---
+
+Developed with ❤️ by [Ankit Singh](https://github.com/ankitsingh9162)
